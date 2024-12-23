@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 
 bool isAnagram(String word1, String word2) {
-  // Strings normalisieren: Leerzeichen entfernen und in Kleinbuchstaben umwandeln
+  // Normalize strings: remove spaces and convert to lowercase
   String normalizedWord1 = word1.replaceAll(' ', '').toLowerCase();
   String normalizedWord2 = word2.replaceAll(' ', '').toLowerCase();
 
-  // Wenn die Längen nicht gleich sind, können sie keine Anagramme sein
+  // If the lengths are not equal, they cannot be anagrams
   if (normalizedWord1.length != normalizedWord2.length) {
     return false;
   }
 
-  // Strings in Listen von Buchstaben umwandeln und sortieren
+  // Convert strings to lists of characters and sort them;
   List<String> sortedWord1 = normalizedWord1.split('')..sort();
   List<String> sortedWord2 = normalizedWord2.split('')..sort();
 
-  // Vergleiche die sortierten Listen ob sie gleich sind dann haben wir ein Anagram
+  // Compare the sorted lists to check if they are equal, then we have an anagram
+  if (sortedWord1.join() == sortedWord2.join()) {
+    return true;
+  }
   return sortedWord1.join() == sortedWord2.join();
 }
 

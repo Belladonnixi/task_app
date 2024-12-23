@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 int multiplyAdvanced(int a, int b) {
   int result = 0;
   bool isNegative = false;
-  // wenn eine der Zahlen negativ ist, dann ist das Ergebnis auch negativ
+  // If one of the numbers is negative, then the result is also negative.
   if (a < 0) {
     isNegative = !isNegative;
     a = -a;
@@ -13,7 +13,7 @@ int multiplyAdvanced(int a, int b) {
     b = -b;
   }
 
-  // Multiplikation wird Mithilfe einer Schleife und Addition durchgeführt
+  // Multiplication is performed using a loop and addition
   for (int i = 0; i < b; i++) {
     result += a;
   }

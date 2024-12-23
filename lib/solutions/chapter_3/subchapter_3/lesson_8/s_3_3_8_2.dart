@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 bool isPrime(int input) {
-  // 0 und 1 sind per se keine Primzahlen
+  // 0 and 1 are not prime numbers by definition
   if (input <= 1) return false;
-  // die 2 selbst ist die einzige gerade Primzahl ansonsten kann keine Primzahl gerade sein
+  // 2 itself is the only even prime number, all other prime numbers are odd
   for (int i = 2; i <= input ~/ 2; i++) {
     if (input % i == 0) {
       return false;
