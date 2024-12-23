@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 bool isPalindrome(String input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  String normalizedInput = input.toLowerCase().replaceAll(' ', '');
+  String reversedInput = normalizedInput.split('').reversed.join();
+  return normalizedInput == reversedInput;
 }
 
 class S3385 extends StatefulWidget {

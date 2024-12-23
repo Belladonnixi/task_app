@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
 int countVowels(String input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  const vowels = 'aeiouAEIOU';
+  int count = 0;
+
+  for (int i = 0; i < input.length; i++) {
+    if (vowels.contains(input[i])) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 class S3384 extends StatefulWidget {

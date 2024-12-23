@@ -1,8 +1,23 @@
 import 'package:flutter/material.dart';
 
 int multiplyAdvanced(int a, int b) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  int result = 0;
+  bool isNegative = false;
+  // wenn eine der Zahlen negativ ist, dann ist das Ergebnis auch negativ
+  if (a < 0) {
+    isNegative = !isNegative;
+    a = -a;
+  }
+  if (b < 0) {
+    isNegative = !isNegative;
+    b = -b;
+  }
+
+  // Multiplikation wird Mithilfe einer Schleife und Addition durchgeführt
+  for (int i = 0; i < b; i++) {
+    result += a;
+  }
+  return isNegative ? -result : result;
 }
 
 class S3388 extends StatefulWidget {
