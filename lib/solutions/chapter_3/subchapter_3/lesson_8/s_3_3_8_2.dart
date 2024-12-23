@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 bool isPrime(int input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  // 0 und 1 sind per se keine Primzahlen
+  if (input <= 1) return false;
+  // die 2 selbst ist die einzige gerade Primzahl ansonsten kann keine Primzahl gerade sein
+  for (int i = 2; i <= input ~/ 2; i++) {
+    if (input % i == 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 class S3382 extends StatefulWidget {

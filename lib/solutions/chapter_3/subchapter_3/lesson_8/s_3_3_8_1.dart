@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 int reverseNumber(int input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  String inputString = input.toString();
+  String reversedString = inputString.split('').reversed.join();
+  return int.parse(reversedString);
 }
 
 class S3381 extends StatefulWidget {
