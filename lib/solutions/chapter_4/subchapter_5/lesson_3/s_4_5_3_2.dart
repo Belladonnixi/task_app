@@ -19,7 +19,11 @@ class TextStyles extends StatelessWidget {
         SizedBox(height: 20),
         Text(
           'App Akademie',
-          style: TextStyle(fontSize: 16, color: Colors.blue),
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.blue,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         SizedBox(height: 20),
         Text(
